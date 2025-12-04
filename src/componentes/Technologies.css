@@ -1,0 +1,62 @@
+.seccionTecnologias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #100019;
+  color: white;
+  padding: clamp(2rem, 6vw, 8rem);
+  margin-top: 20rem;
+}
+
+.tituloDiv {
+  text-align: center;
+  margin-bottom: 5rem;
+  
+}
+
+.tituloTecnologias{
+
+  font-size: 2.6rem;
+}
+
+
+.tecnologiasContenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem; 
+  flex-wrap: wrap;
+}
+
+
+
+.filaSuperior,
+.filaInferior {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.columnaBackend, 
+.columnaHerramientas, 
+.columnaFrontend, 
+.columnaDataBase { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.filaInferior {
+  margin-top: 3rem;
+}
+
+.backendH2,
+.herramientasH2, 
+.frontendH2, 
+.dataBaseH2 {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}

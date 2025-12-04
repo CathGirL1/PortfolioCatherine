@@ -1,0 +1,149 @@
+.seccionContacto{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  min-height: 50vh;
+  padding: clamp(2rem, 6vw, 10rem);
+  background-color: #100019; 
+  color: white;
+  flex-wrap: wrap;
+
+}
+
+.infoRedesSociales{
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 1262px;
+  height: 440px;
+  width: 120%;
+  flex-wrap: wrap;
+  border-radius: 105px; 
+  background-color: rgb(20, 1, 1);
+  padding: 3rem; /* agrega algo de aire interno */
+
+}
+
+.redesSociales{
+  
+  max-width: 600px;
+  width: 100%;
+  margin-left: 1.1vw;
+  flex: 1; /* que ocupe el mismo espacio que el otro lado */
+ 
+}
+
+.redesSociales H2{
+
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 4rem;
+  margin-top: 0; /* antes tenías 6rem, eso desalineaba */
+  margin-left: 4.7vw;
+  
+  
+}
+
+.iconosImagenes {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem; 
+  margin-left: 3.5vw;
+}
+
+.formularioContacto{
+
+  max-width: 670px;
+  margin-left: 1.1vw;
+ 
+  
+}
+
+.formularioContacto H2{
+
+  display: grid;
+  justify-content: end;
+  align-items: column;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 0; 
+  text-align: right;
+  margin-right: 62px; 
+  color: white;
+  
+ 
+  
+  
+}
+
+.bandejaFormulario{
+
+  display: grid;
+  justify-content: flex-end ;
+  align-items: column;
+  gap: 1rem;
+  width: 80%;
+  color: white;
+  
+  
+}
+
+.bandejaFormulario input{
+
+ background-color: #FFD700;
+ border-radius: 10px;
+ width: 182px; 
+ padding: 0.4rem;
+ border-radius: 10px;
+  
+}
+
+.bandejaFormulario button{
+
+ background-color: #8B0000;
+ border-radius: 59px;
+ color: white; 
+ padding: 0.5rem 1.2rem;
+ cursor: pointer;
+ transition: background-color 0.3s ease;
+  
+}
+
+.bandejaFormulario button:hover {
+  background-color: #FFD700; 
+  color: black; 
+}
+
+.bandejaFormulario button:disabled {
+  background-color: black;
+  color: #FFD700;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+
+.bandejaFormulario input::placeholder {
+  color: #100019;
+}
+
+.bandejaFormulario textarea::placeholder {
+  color: #100019;
+  
+}
+
+.bandejaFormulario textarea {
+  background-color: #FFD700;
+  color: black; /* 👈 Hace visible el texto */
+  border-radius: 10px;
+  padding: 0.4rem;
+}
+
+
+
+
+
+

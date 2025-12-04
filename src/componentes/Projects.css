@@ -1,0 +1,278 @@
+.apartadoProyectos {
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 80vh;
+  padding: clamp(2rem, 6vw, 8rem);
+  background-color: #100019; 
+  color: white;
+  gap: 10rem; /* menos separación entre título y proyectos */
+  margin-top: 34rem; /* separa esta sección de la anterior */
+
+
+}
+
+
+
+
+
+.divInformacionProyectos {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tituloProyectos {
+  font-size: 2.6rem;
+  margin: 0;
+}
+
+
+
+
+.proyectoRadioFM{
+
+  display: flex;
+  justify-content: space-between; /* texto a la izquierda, imágenes a la derecha */
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1500px;
+
+
+}
+
+.infoProyectoRadioFM{
+  max-width: 600px;
+  width: 100%;
+}
+
+
+.capturasProyectoRadioFM{
+
+
+   display: flex;
+   justify-content: flex-end; /* imágenes pegadas hacia la derecha */
+   align-items: flex-start;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+   max-width: 750px; /* podés ajustar este valor para que no ocupe todo el ancho */
+
+
+}
+
+
+.capturasProyectoRadioFM img{
+
+  width: 350px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(181, 1, 1, 0.549);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+
+}
+
+.capturasProyectoRadioFM img:hover{
+
+
+  transform: scale(2.08);
+  box-shadow: 0 0 30px rgba(255, 50, 50, 0.7);
+
+
+}
+
+.palabrasRadioFM{
+
+  font-size: 20px;
+  max-width: 400px; /* evita que el texto sea muy largo */
+  line-height: 1.6; /* mejora la lectura */
+  text-align: justify; /* opcional: alinea el texto de forma prolija */
+  overflow-wrap: break-word; /* fuerza el salto si hay palabras largas */
+
+}
+
+
+
+.proyectoRadio{
+
+  display: flex;
+  justify-content: space-between; /* texto a la izquierda, imágenes a la derecha */
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1500px;
+
+
+}
+
+.infoProyectoRadio{
+  max-width: 600px;
+  width: 100%;
+}
+
+
+.capturasProyectoRadio{
+
+
+   display: flex;
+   justify-content: flex-end; /* imágenes pegadas hacia la derecha */
+   align-items: flex-start;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+   max-width: 750px; /* podés ajustar este valor para que no ocupe todo el ancho */
+
+
+}
+
+
+.capturasProyectoRadio img{
+
+  width: 350px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(181, 1, 1, 0.549);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+
+}
+
+.capturasProyectoRadio img:hover{
+
+
+  transform: scale(2.08);
+  box-shadow: 0 0 30px rgba(255, 50, 50, 0.7);
+
+
+}
+
+.palabrasRadio{
+
+  font-size: 20px;
+  max-width: 400px; /* evita que el texto sea muy largo */
+  line-height: 1.6; /* mejora la lectura */
+  text-align: justify; /* opcional: alinea el texto de forma prolija */
+  overflow-wrap: break-word; /* fuerza el salto si hay palabras largas */
+
+}
+
+
+.proyectoServicioTecnico {
+  display: flex;
+  justify-content: space-between; /* texto a la izquierda, imágenes a la derecha */
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1500px;
+}
+
+
+
+.infoServicioTecnico {
+  max-width: 600px;
+  width: 100%;
+}
+
+.capturasServicioTecnico {
+  display: flex;
+  justify-content: flex-end; /* imágenes pegadas hacia la derecha */
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 750px; /* podés ajustar este valor para que no ocupe todo el ancho */
+}
+
+.capturasServicioTecnico img {
+  width: 350px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(181, 1, 1, 0.549);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.capturasServicioTecnico img:hover {
+  transform: scale(2.08);
+  box-shadow: 0 0 30px rgba(255, 50, 50, 0.7);
+}
+
+.palabrasServicioTecnico{
+
+  font-size: 20px;
+  max-width: 400px; /* evita que el texto sea muy largo */
+  line-height: 1.6; /* mejora la lectura */
+  text-align: justify; /* opcional: alinea el texto de forma prolija */
+  overflow-wrap: break-word; /* fuerza el salto si hay palabras largas */
+
+}
+
+.proyectoPortfolio {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.capturasPortfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.capturasPortfolio img {
+  width: 350px; 
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(181, 1, 1, 0.549);
+  transition: transform 0.4s ease, box-shadow 0.4s ease; 
+  cursor: pointer; 
+}
+
+.capturasPortfolio img:hover {
+  transform: scale(2.08); 
+  box-shadow: 0 0 30px rgba(255, 50, 50, 0.7); 
+}
+
+.infoProyectoPorfolio {
+  max-width: 670px;
+  width: 100%;
+}
+
+.palabrasPortfolio {
+  font-size: 20px;
+  max-width: 400px; 
+  line-height: 1.6; 
+  text-align: justify; 
+  overflow-wrap: break-word; 
+}
+
+.proyectoServicioTecnico,
+.proyectoRadio,
+.proyectoRadioFM, 
+.proyectoPortfolio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  max-width: 1590px;
+}
+
+.proyectoServicioTecnico h2,
+.proyectoRadio h2,
+.proyectoRadioFM h2, 
+.proyectoPortfolio h2 {
+  font-size: 1.8rem;
+  color: #f5f5f5;
+}
+
+

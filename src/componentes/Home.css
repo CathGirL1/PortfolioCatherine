@@ -1,0 +1,75 @@
+
+body {
+  background-color: #0d001a;
+  margin: 0;
+  padding: 0;
+  font-family:'Times New Roman', Times, serif
+}
+
+
+.fondoHomePresentacion{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; 
+    padding-top: 120px;
+    padding-inline: 1rem; 
+    flex-wrap: wrap;
+    color: white;
+
+}
+
+.fotoCatherine{
+
+    width: 280px;
+    height: 275px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(181, 1, 1, 0.549);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.fotoCatherine:hover{
+
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+
+}
+
+
+h2{
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+h1{
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+/*
+.palabra {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: slideFadeIn 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes slideFadeIn { para hacer movimiento en el about me 
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+*/
+

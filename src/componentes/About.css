@@ -1,0 +1,69 @@
+.seccionSobreMi {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-end; 
+  min-height: 70vh;
+  padding: clamp(2rem, 6vw, 10rem);
+  background-color: #100019; 
+  color: white;
+}
+
+
+.infoSobreMi {
+  max-width: 670px;
+  width: 100%;
+}
+
+
+.infoSobreMi h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+ 
+}
+
+.palabrasSobreMi {
+  font-size: 20px;
+}
+
+.fotoCatherineAnimada{
+
+  width: 500px;
+  height: 300px;
+  border-radius: 50px;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(181, 1, 1, 0.549);
+
+}
+
+.divSobreMi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20rem;
+  max-width: 1490px;
+  height: 400px;
+  width: 120%;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateX(-40px);
+  background-color: rgb(20, 1, 1);
+  border-radius: 20px;
+}
+
+.divSobreMi.visible {
+  /* Animación al entrar en pantalla */
+  animation: desplazamientoHaciaDerecha 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+
+/* Animación */
+@keyframes desplazamientoHaciaDerecha {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

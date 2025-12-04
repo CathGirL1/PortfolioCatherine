@@ -1,0 +1,89 @@
+header{
+    background-color: #8B0000;
+    color: white;
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    padding: 0 5vw;
+    position: fixed;  /* se queda arriba */
+    top: 0;
+    height: 130px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    flex-wrap: wrap; /*si no entra el icono formato cel o tablet q se ponga arriba de lo botones*/
+    gap: 2vw; 
+}
+
+.logoCatherine{
+    
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer; 
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+    padding: 0;
+    flex-shrink: 0;
+    
+
+}
+
+/* Lista de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 4vw;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+  
+.nav-links li {
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links li::after{
+
+    content: ""; 
+    position: absolute; 
+    bottom: -4px; /*esto para separar el texto de la linea creo*/
+    left: 0; 
+    width: 0%;
+    height: 2px;
+    background-color: #FFD700;
+    transition: width 0.3s ease-in-out;
+
+}
+  
+.nav-links li:hover::after{
+    width: 100%;
+
+}
+.nav-links li:hover {
+    color: #FFD700;
+}
+
+.nav-links a{
+
+    color: white;
+    text-decoration: none;
+
+}
+
+.nav-links a:hover{
+
+    color: #FFD700;
+
+}
+
+
+
+
