@@ -149,6 +149,29 @@
   }
 }
 
+.animacionScrollDerecha {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.animacionScrollDerecha.visible {
+  /* Animación al entrar en pantalla */
+  animation: desplazamientoHaciaDerecha 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+
+/* Animación */
+@keyframes desplazamientoHaciaDerecha {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 
 

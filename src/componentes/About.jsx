@@ -5,7 +5,7 @@ import gooodMe from '../imagenes/gooodMe.png'
 function About(){
     useEffect(() => {
 
-        const divMovimiento = document.querySelector(".divSobreMi");
+        const divMovimiento = document.querySelector(".animacionScrollDerecha");
         
         const observer = new IntersectionObserver(
 
@@ -34,7 +34,7 @@ function About(){
     return(
 
         <section id="sobreMi" className="seccionSobreMi">
-            <div className= "divSobreMi">
+            <div className= "divSobreMi animacionScrollDerecha">
                 <div className="infoSobreMi">
                     <h2>Sobre mi...</h2>
                     <p className= "palabrasSobreMi"> Estoy en la etapa final de la carrera Analista Programador en la

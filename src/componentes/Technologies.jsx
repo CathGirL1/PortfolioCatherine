@@ -8,10 +8,31 @@ import dataBaseTecnologias from '../imagenes/dataBaseTecnologias.png'
 function Technologies(){
     useEffect(() => {
 
+        const divMovimiento = document.querySelector(".tecnologiasContenido");
+        
+        const observer = new IntersectionObserver(
 
+            (entries) => {
+                entries.forEach((entry) => {
+                    if(entry.isIntersecting){
+                        entry.target.classList.add("visible"); //se activa la animacion cuando entra a la page
+                    }else{
+                        // y aca se quta cuando sale
+                        entry.target.classList.remove("visible"); 
+                    }
+                }
+            )},
+            {threshold: 0.3} //se activa cuando por lo menos el 30% del div se ve
+        ); 
 
+        if(divMovimiento) observer.observe(divMovimiento); 
 
-    })
+        return () => {
+            if (divMovimiento) observer.unobserve(divMovimiento); 
+        }                 
+
+    },[])
+    
     return(
 
        <section id="tecnologias" className="seccionTecnologias">
@@ -45,7 +66,7 @@ function Technologies(){
                 </div>
                     
             </div>
-</section>
+        </section>
 
 
     ); 

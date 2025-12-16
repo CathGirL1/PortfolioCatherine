@@ -4,6 +4,7 @@ import iconoGitHub from '../imagenes/iconoGitHub.png'
 import iconoInstagram from '../imagenes/iconoInstagram.png'
 import iconoWpp from '../imagenes/iconoWpp.png'
 import {useState} from 'react'; 
+import { useEffect } from "react";
 
 function Contact(){
 
@@ -65,11 +66,35 @@ function Contact(){
 
     const [estaEnviado, setEnviado] = useState(false); 
 
+    useEffect(() => {
+        const elementosDelContact = document.querySelectorAll(".animacionScrollDerecha");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }else{
+                    entry.target.classList.remove("visible");
+                }
+            });
+        },
+        { threshold: 0.15 }
+        );
+
+        elementosDelContact.forEach((el) => observer.observe(el));
+
+        return () => {
+            elementosDelContact.forEach((el) => observer.unobserve(el));
+        };
+    }, []);
+
+
 
     return(
 
         <section id = "contacto" className="seccionContacto">
-            <div className="infoRedesSociales">
+            <div className="infoRedesSociales animacionScrollDerecha">
                 <div className="redesSociales">
                     <h2>Redes sociales</h2>
 

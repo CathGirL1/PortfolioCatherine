@@ -44,13 +44,17 @@
   height: 400px;
   width: 120%;
   flex-wrap: wrap;
-  opacity: 0;
-  transform: translateX(-40px);
   background-color: rgb(20, 1, 1);
   border-radius: 20px;
 }
 
-.divSobreMi.visible {
+.animacionScrollDerecha {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+
+.animacionScrollDerecha.visible {
   /* Animación al entrar en pantalla */
   animation: desplazamientoHaciaDerecha 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
