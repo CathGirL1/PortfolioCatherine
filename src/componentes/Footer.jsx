@@ -1,13 +1,13 @@
 import './Footer.css'
 
 
-function Footer(){
+function Footer({textos, idioma}){
 
     return (
 
         <footer className="footer">
            <div class="footer-contenedor">
-                © 2025 Catherine Sonderegger · Portfolio
+               {textos[idioma].footer}
            </div>
         </footer>
     );

@@ -6,7 +6,7 @@ import iconoWpp from '../imagenes/iconoWpp.png'
 import {useState} from 'react'; 
 import { useEffect } from "react";
 
-function Contact(){
+function Contact({textos, idioma}){
 
     const [datosFormulario, setDatosFormulario] = useState({
 
@@ -96,7 +96,7 @@ function Contact(){
         <section id = "contacto" className="seccionContacto">
             <div className="infoRedesSociales animacionScrollDerecha">
                 <div className="redesSociales">
-                    <h2>Redes sociales</h2>
+                    <h2>{textos[idioma].redes}</h2>
 
                     <div className="iconosImagenes">
                         <a className = "iconoLinkedin" href="https://www.linkedin.com/in/catherine-salomé-sonderegger-goméz-20050b387" target="_blank" rel="noopener noreferrer">
@@ -115,20 +115,20 @@ function Contact(){
                 </div>
 
                 <div className="formularioContacto">
-                    <h2>Contáctame</h2>
+                    <h2>{textos[idioma].contacto}</h2>
                     <form className="bandejaFormulario" onSubmit={manejoEnvioDatosFormulario}>
 
-                        <label htmlFor="email">Email</label>
-                        <input type="email" id="email" placeholder="Tu @email" value={datosFormulario.email} onChange={manejarCambioDatosInput}></input>
+                        <label htmlFor="email">{textos[idioma].email}</label>
+                        <input type="email" id="email" placeholder={textos[idioma].emailPlaceHolder} value={datosFormulario.email} onChange={manejarCambioDatosInput}></input>
 
-                        <label htmlFor="nombre">Nombre del propietario de mensaje</label>
-                        <input type="text" id="nombre" placeholder="Tu nombre" value={datosFormulario.nombre} onChange={manejarCambioDatosInput}></input>
+                        <label htmlFor="nombre">{textos[idioma].propietario}</label>
+                        <input type="text" id="nombre" placeholder={textos[idioma].propietarioPlaceHolder} value={datosFormulario.nombre} onChange={manejarCambioDatosInput}></input>
 
-                        <label htmlFor="mensaje">Asunto del mensaje</label>
-                        <textarea id="mensaje" placeholder="Tu mensaje" rows="4" value={datosFormulario.mensaje} onChange={manejarCambioDatosInput}></textarea>
+                        <label htmlFor="mensaje">{textos[idioma].mensaje}</label>
+                        <textarea id="mensaje" placeholder={textos[idioma].mensajePlaceHolder} rows="4" value={datosFormulario.mensaje} onChange={manejarCambioDatosInput}></textarea>
 
                         <button type="submit" disabled={estaEnviado}>
-                            {estaEnviado ? "Enviando..." : "Enviar"}
+                           {textos[idioma].enviar}
                         </button>
 
 

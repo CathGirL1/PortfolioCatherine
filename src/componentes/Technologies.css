@@ -26,8 +26,7 @@
   align-items: center;
   gap: 6rem; 
   flex-wrap: wrap;
-  opacity: 0;
-  transform: translateY(40px);
+ 
 }
 
 
@@ -63,8 +62,13 @@
   margin-bottom: 1rem;
 }
 
+.animacionScrollArriba{
 
-.tecnologiasContenido.visible{
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.animacionScrollArriba.visible{
 
   animation: desplazamientoHaciaArriba 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }

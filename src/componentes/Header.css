@@ -85,5 +85,25 @@ header{
 }
 
 
+.idiomas {
+  display: flex-start;
+  gap: 0.8rem;
+}
+
+.idiomas button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.idiomas img {
+  width: 28px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.idiomas img:hover {
+  transform: scale(1.1);
+}
 
 

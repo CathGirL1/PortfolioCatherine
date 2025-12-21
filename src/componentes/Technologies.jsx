@@ -5,10 +5,10 @@ import herramientasTecnologias from '../imagenes/herramientasTecnologias.png'
 import frontendTecnologias from '../imagenes/frontendTecnologias.png'
 import dataBaseTecnologias from '../imagenes/dataBaseTecnologias.png'
 
-function Technologies(){
+function Technologies({textos, idioma}){
     useEffect(() => {
 
-        const divMovimiento = document.querySelector(".tecnologiasContenido");
+        const divMovimiento = document.querySelector(".animacionScrollArriba");
         
         const observer = new IntersectionObserver(
 
@@ -37,10 +37,10 @@ function Technologies(){
 
        <section id="tecnologias" className="seccionTecnologias">
             <div className="tituloDiv">
-                <h2 className="tituloTecnologias">Tecnologías</h2>
+                <h2 className="tituloTecnologias">{textos[idioma].tecnologias}</h2>
             </div>
 
-            <div className="tecnologiasContenido">
+            <div className="tecnologiasContenido animacionScrollArriba">
                 <div className = "filaSuperior">
                     <div className="columnaBackend">
                         <h2 className="backendH2">Backend</h2>
@@ -48,7 +48,7 @@ function Technologies(){
                     </div>
 
                     <div className="columnaHerramientas">
-                        <h2 className="herramientasH2">Herramientas</h2>
+                        <h2 className="herramientasH2">{textos[idioma].herramientas}</h2>
                         <img className="capturaHerramientas" src={herramientasTecnologias} alt="captura de tecnologías de herramientas"/>
                     </div>
                 </div>
@@ -60,7 +60,7 @@ function Technologies(){
                     </div>
 
                     <div className="columnaDataBase">
-                        <h2 className="dataBaseH2">Bases de datos</h2>
+                        <h2 className="dataBaseH2">{textos[idioma].baseDeDatos}</h2>
                         <img className="capturaDataBase" src={dataBaseTecnologias} alt="captura de tecnologías de base de datos"/>
                     </div>
                 </div>

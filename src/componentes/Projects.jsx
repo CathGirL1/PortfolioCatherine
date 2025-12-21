@@ -33,9 +33,30 @@ import radioParte10 from '../imagenes/radioParte10.png'
 import radioParte11 from '../imagenes/radioParte11.png'
 
 
-function Projects(){
-        useEffect(() => {
-           
+function Projects({textos, idioma}){
+       
+
+    useEffect(() => {
+        const elementosDelContact = document.querySelectorAll(".animacionScrollArriba");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }else{
+                    entry.target.classList.remove("visible");
+                }
+            });
+        },
+        { threshold: 0.3}
+        );
+
+        elementosDelContact.forEach((el) => observer.observe(el));
+
+        return () => {
+            elementosDelContact.forEach((el) => observer.unobserve(el));
+        };
     }, []);
 
 
@@ -44,14 +65,13 @@ function Projects(){
 
         <article id = "proyectosSoftware" className="apartadoProyectos">
             <div className="divInformacionProyectos">
-                <h2 className="tituloProyectos">Proyectos de software realizados</h2>
+                <h2 className="tituloProyectos">{textos[idioma].proyectos}</h2>
             </div>
             
-            <div className="proyectoServicioTecnico">
+            <div className="proyectoServicioTecnico animacionScrollArriba">
                 <div className="infoServicioTecnico">
-                    <h2>Servicio Tecnico</h2>
-                    <p className= "palabrasServicioTecnico"> Aplicación web desarrollada para la gestión de servicios técnicos de reparación, que permite administrar clientes, técnicos, pedidos y órdenes de trabajo, además de generar reportes detallados y agregar comentarios a cada orden. Para su desarrollo se utilizaron C# y ASP.NET en el backend. En el frontend se emplearon Razor Pages de ASP.NET, combinando HTML y CSS, brindando una interfaz funcional.
-                    </p>
+                    <h2>{textos[idioma].tituloServicioTecnico}</h2>
+                    <p className= "palabrasServicioTecnico">{textos[idioma].palabrasServicioTecnico}</p>
                 </div>
                 <div className="capturasServicioTecnico">
                    <img className="servicioTecParte1" src = {servicioTecParte1} alt = "foto parte 1 servicio tecnico"></img>
@@ -64,12 +84,10 @@ function Projects(){
                 </div>
             </div>
 
-            <div className="proyectoRadio">
+            <div className="proyectoRadio animacionScrollArriba">
                 <div className="infoProyectoRadio">
-                    <h2>Proyecto Radio</h2>
-                    <p className= "palabrasRadio"> Pagina web basada en el patrón MVC, con login, registro y CRUD de usuarios, noticias y programas. Incluye módulos de clima y cotizaciones.
-                        Backend: C#, ASP.NET MVC, Entity Framework, ADO.NET, SQL Server. Frontend: Razor, HTML, CSS.
-                    </p>
+                    <h2>{textos[idioma].tituloRadio}</h2>
+                    <p className= "palabrasRadio">{textos[idioma].palabrasRadio}</p>
                 </div>
                 <div className="capturasProyectoRadio">
                    <img className = "radioParte1" src = {radioParte1} alt="foto parte 1 proyecto Radio"></img>
@@ -86,11 +104,10 @@ function Projects(){
                 </div>
             </div>
 
-            <div className="proyectoRadioFM">
+            <div className="proyectoRadioFM animacionScrollArriba">
                 <div className="infoProyectoRadioFM">
-                    <h2>Proyecto Radio FM</h2>
-                    <p className= "palabrasRadioFM"> Aplicación web que permite a los usuarios registrarse e iniciar sesión para acceder a una radio en vivo. Además, ofrece la posibilidad de personalizar la interfaz seleccionando los apartados que deseen visualizar, como el pronóstico del clima, cotizaciones, últimas noticias de Uruguay y estrenos de películas. Desarrollada utilizando .NET MAUI y XAML para el frontend, C# en el backend y SQLite como base de datos local.
-                    </p>
+                    <h2>{textos[idioma].tituloRadioFM}</h2>
+                    <p className= "palabrasRadioFM">{textos[idioma].palabrasRadioFM}</p>
                 </div>
                 <div className="capturasProyectoRadioFM">
                     <img className = "radioFMparte1" src = {radioFMparte1} alt="foto parte 1 proyectoRadioFM"></img>
@@ -105,14 +122,10 @@ function Projects(){
                 </div>
             </div>
 
-            <div className="proyectoPortfolio">
+            <div className="proyectoPortfolio animacionScrollArriba">
                 <div className="infoProyectoPortfolio">
-                    <h2>Proyecto Portfolio</h2>
-                     <p className= "palabrasPortfolio">  Proyecto personal desarrollado con React, donde apliqué mis conocimientos en JavaScript, HTML y CSS para construir un portafolio web moderno e interactivo.
-                        Durante su desarrollo, fui adquiriendo una comprensión más profunda del ecosistema de React, especialmente en la gestión de componentes, hooks y estilos dinámicos.
-                        Este proyecto me permitió descubrir el potencial de React para crear interfaces visualmente atractivas y con un diseño moderno, explorando animaciones y decoración adaptable.
-                        Frontend: React, JavaScript, HTML, CSS. Patrón de diseño: Basado en componentes reutilizables y arquitectura modular.
-                    </p>
+                    <h2>{textos[idioma].tituloPortfolio}</h2>
+                     <p className= "palabrasPortfolio">{textos[idioma].palabrasPortfolio}</p>
 
                 </div>
                 <div className="capturasPortfolio">

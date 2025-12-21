@@ -1,11 +1,13 @@
 
 import "./Header.css"
 import logo from '../imagenes/logo.png'
+import banderaEEUU from '../imagenes/banderaEEUU.png'
+import banderaEspaña from '../imagenes/banderaEspaña.png'
 
-function Header(){
+function Header({ setIdioma }){
     return(
-        <header>
-
+        <header className="header">
+          
           <img className="logoCatherine" src={logo} alt="Logo" />
           <nav className= "nav">
             <ul className="nav-links">
@@ -17,7 +19,17 @@ function Header(){
             </ul>
 
           </nav>
-          
+          <div className="idiomas">
+            <button onClick={ () => setIdioma("es")}>
+              <img src={banderaEspaña} alt="Español" />
+            </button> 
+
+            <button onClick={ () => setIdioma("en")}>
+              <img src={banderaEEUU} alt="English" />
+            </button> 
+
+          </div>
+
         </header>
         
     );

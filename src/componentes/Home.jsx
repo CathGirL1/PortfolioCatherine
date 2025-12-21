@@ -1,14 +1,14 @@
 import "./Home.css"
 import catherine from '../imagenes/catherine.png'
 
-function Home(){
+function Home({textos, idioma}){
 
     return (
         <section id = "presentacionInicio" className="fondoHomePresentacion">
             <img className="fotoCatherine" src={catherine} alt="foto de Catherine" />
             <div className="infoCatherine">
-                <h1 className="palabra">Analista programadora</h1>
-                <h2>Catherine Sonderegger</h2>
+                <h1 className="palabra">{textos[idioma].carrera}</h1>
+                <h2>{textos[idioma].nombreApellido}</h2>
             </div>
         </section>
     );
