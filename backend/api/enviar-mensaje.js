@@ -30,7 +30,10 @@ module.exports = async function (req, res){
     await conexionCorreo.sendMail(opcionesCorreo);
     return res.status(200).json({ message: "Correo enviado correctamente" });
   } catch (error) {
-    console.error(error);
-    return res.status(500).json({ error: "Error al enviar el correo" });
+      console.error("ERROR COMPLETO:", error);
+      return res.status(500).json({ 
+        error: "Error al enviar el correo",
+          detalle: error.message
+    });
   }
 }
