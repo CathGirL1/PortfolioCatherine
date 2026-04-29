@@ -33,7 +33,7 @@ function Contact(){
         setEnviado(true); 
 
         try{
-            const respuesta = await fetch("http://localhost:5000/enviar-mensaje", {
+            const respuesta = await fetch("/api/send-email", {
 
                 method: "POST", 
                 headers: {
