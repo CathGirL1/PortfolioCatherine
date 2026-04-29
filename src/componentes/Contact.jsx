@@ -33,7 +33,7 @@ function Contact(){
         setEnviado(true); 
 
         try{
-            const respuesta = await fetch("/api/send-email", {
+            const respuesta = await fetch("/api/enviar-mensaje", {
 
                 method: "POST", 
                 headers: {
