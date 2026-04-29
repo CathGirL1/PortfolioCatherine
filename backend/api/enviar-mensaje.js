@@ -2,7 +2,7 @@
 
 const nodemailer = require("nodemailer");
 
-module.exports = async function (req, res){ 
+module.export = async function (req, res){ 
 
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Método no permitido" });
@@ -35,5 +35,5 @@ module.exports = async function (req, res){
         error: "Error al enviar el correo",
           detalle: error.message
     });
-  }
+ }
 }
